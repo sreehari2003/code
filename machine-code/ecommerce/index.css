@@ -1,0 +1,76 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+.nav {
+  background-color: rgb(110, 178, 215);
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  padding: 6px 10px;
+  background-color: aquamarine;
+  border: none;
+  font-size: large;
+  border-radius: 4px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+h4 {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.main {
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 10px;
+}
+.card {
+  padding: 10px;
+  width: 300px;
+  min-height: 350px;
+  border: 1px solid red;
+}
+.card:hover {
+  transform: translateY(-1);
+  cursor: pointer;
+}
+.card h4 {
+  text-align: start;
+}
+.d-none {
+  display: none;
+}
+.loader {
+  height: 90vh;
+  width: 100%;
+}
+img {
+  height: 80%;
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.info {
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.price {
+  border: 1px solid red;
+  padding: 10px;
+}
