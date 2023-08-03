@@ -11,6 +11,10 @@ const setLoading = (check) => {
   }
 };
 
+const log = () => {
+  console.log("TEST");
+};
+
 const urls = "https://dummyjson.com/products";
 
 const getData = async () => {
@@ -26,7 +30,7 @@ const getData = async () => {
         <img src=${el.images[0]} alt="" />
         <h4>${el.title}</h4>
         <div class="flex info">
-        <button class="btn">add to cart</button>
+        <button class="btn" onClick="log()" id=${el.id}>add to cart</button>
         <span class="price">${el.price}</span>
         </div>
         </div>
@@ -38,8 +42,6 @@ const getData = async () => {
 
 getData();
 
-main.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
-    console.log(e.target);
-  }
+main.addEventListener("click", (el) => {
+  console.log(el.target.id);
 });
