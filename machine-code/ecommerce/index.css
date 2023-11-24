@@ -33,7 +33,6 @@ h4 {
 }
 
 .main {
-  justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
   display: flex;
@@ -48,6 +47,7 @@ h4 {
 .card:hover {
   transform: translateY(-1);
   cursor: pointer;
+  box-shadow: inset(1px);
 }
 .card h4 {
   text-align: start;

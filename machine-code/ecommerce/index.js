@@ -23,7 +23,6 @@ const getData = async () => {
   const data = await res.json();
 
   let html = "";
-  console.log(typeof data.products);
   data.products.forEach((el) => {
     html += `
         <div class="card" >

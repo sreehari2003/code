@@ -31,7 +31,6 @@ function dfs(node) {
     if (node) {
       res.push(node.val);
       traverse(node.left);
-      console.log(node, "NODE IS HERE");
       traverse(node.right);
     }
   }
