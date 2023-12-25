@@ -55,3 +55,41 @@ var maxDepth = function (root) {
 
   return h;
 };
+
+// var maxSum = (root) => {
+//   if (!root) {
+//     return null;
+//   }
+//   let sum = 0;
+
+//   while (root) {
+//     sum += root.value;
+//     // Choose the next node based on the maximum value between left and right children.
+//     const next =
+//       root.left && root.right
+//         ? root.left.value > root.right.value
+//           ? root.left
+//           : root.right
+//         : root.left
+//         ? root.left
+//         : root.right;
+
+//     root = next;
+//   }
+
+//   console.log(sum);
+// };
+
+// maxSum(rootNode);
+
+var maxSum = (root) => {
+  if (!root) {
+    return 0;
+  }
+
+  const s = root.value + Math.max(maxSum(root.left), maxSum(root.right));
+
+  return s;
+};
+
+console.log(maxSum(rootNode));
