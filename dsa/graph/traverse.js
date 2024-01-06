@@ -20,6 +20,7 @@ class Graph {
     }
   }
   bfs(start) {
+    console.log("STARTING BFS");
     const q = [];
     const res = [];
     const visited = new Map();
@@ -41,6 +42,17 @@ class Graph {
     }
 
     console.log(res);
+    console.log("BFS ENDED");
+  }
+
+  dfs(node, list = [], visited = {}) {
+    visited[node] = true;
+    list.push(node);
+    this.vertices[node].forEach((el) => {
+      if (!visited[el]) {
+        this.dfs(el, list, visited);
+      }
+    });
   }
 }
 
@@ -57,3 +69,4 @@ graph.addEdge("C", "A");
 
 // graph.display();
 graph.bfs("A");
+graph.dfs("A");
