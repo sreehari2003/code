@@ -10,6 +10,7 @@ const subs = (index, t = [], arr) => {
     console.log("call stack", index, t, arr);
 
     t.pop();
+    console.log("popped", t);
     subs(index, t, arr);
   }
 };

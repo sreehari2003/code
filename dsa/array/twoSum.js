@@ -1,22 +1,17 @@
 const twoSum = (arr, target) => {
-  const dict = {};
+  const memo = {};
 
   for (let i = 0; i < arr.length; i++) {
-    let diff = target - arr[i];
-    let t = arr[i];
-    if (t in dict) {
-      return [dict[t], i];
+    const t = arr[i];
+    const diff = target - t;
+    if (t in memo) {
+      return [memo[t], i];
     } else {
-      dict[diff] = i;
+      memo[diff] = i;
     }
   }
 };
 
-/*
-  {
-   4:
-  }
+const t = [1, 3, 5, 2];
 
-*/
-
-console.log(twoSum([1, 2, 3, 4, 6], 10));
+console.log(twoSum(t, 7));

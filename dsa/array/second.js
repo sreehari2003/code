@@ -1,29 +1,17 @@
-const arra = [3, 4, 5, 2, 6, 7];
+const second = (arr) => {
+  let high = Number.MIN_SAFE_INTEGER;
+  let small = Number.MIN_SAFE_INTEGER;
 
-// time compexity O(n log n)
-// const secondLarge = (array) => {
-//   array.sort();
-
-//   return array[array.length - 2];
-// };
-
-// console.log(secondLarge(arra));
-
-function secondLarge(array) {
-  let top = array[0];
-  let second = array[0];
-
-  // find the largest of array
-  for (let i = 0; i < array.length; i++) {
-    top = Math.max(array[i], top);
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > second && array[i] < top) {
-      second = array[i];
+  for (let i of arr) {
+    if (i > high) {
+      small = high;
+      high = i;
+    } else if (i < high && i > small) {
+      small = i;
     }
   }
 
-  return second;
-}
+  console.log(small);
+};
 
-console.log(secondLarge(arra));
+second([1, 2, 3, 4, 5, 2, 4, 2, 4, 6, 1, 2, 3, 4, 6, 778]);

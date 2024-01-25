@@ -1,14 +1,8 @@
-class Student {
-  constructor(name, age) {
-    this.age = age;
-    this.name = name;
-  }
+const m = {
+  a: "1",
+  b: 3,
+};
 
-  getName() {
-    console.log(this.name);
-  }
+for (let val in m) {
+  console.log(val);
 }
-
-a = new Student("sreehari", 30);
-
-a.getName();

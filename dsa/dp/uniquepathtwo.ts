@@ -23,7 +23,7 @@ function uniquePathsWithObstacles(obstacleGrid: number[][]): number {
   return dfs(0, 0, rows, cols);
 }
 
-const t = uniquePathsWithObstacles([
+const h = uniquePathsWithObstacles([
   [
     0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1,
     0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0,
@@ -138,4 +138,4 @@ const t = uniquePathsWithObstacles([
   ],
 ]);
 
-console.log(t);
+console.log(h);
