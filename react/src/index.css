@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+input {
+  width: 100%;
+  height: 20px;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: flex;
+}
+.user-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+}
+
+.sugg {
+  background-color: white;
+  gap: 2px;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 5px;
+  border: 1px solid #ccc;
+  position: absolute;
+}
+
+.sugg li {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.sugg li:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.sugg img {
+  width: 50px;
+  height: 50px;
+}
+.pill {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 3px 5px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill img {
+  width: 20px;
+}
