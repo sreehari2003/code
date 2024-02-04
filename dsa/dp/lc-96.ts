@@ -1,1 +1,5 @@
-function numTrees(n: number): number {}
+function numTrees(n: number): number {
+ 
+
+
+}

@@ -20,29 +20,18 @@ class Graph {
     }
   }
   bfs(start) {
-    console.log("STARTING BFS");
-    const q = [];
-    const res = [];
     const visited = new Map();
-
     visited.set(start, true);
+    const t = [start];
 
-    q.push(start);
-
-    while (q.length > 0) {
-      const t = q.shift();
-      res.push(t);
-      this.vertices[t].forEach((el) => {
-        const node = visited.get(el);
-        if (!node) {
-          visited.set(el, true);
-          q.push(el);
+    while (t.length) {
+      const adj = t.shift();
+      adj.forEach((el) => {
+        if (!visited.get(el)) {
+          t.push(el);
         }
       });
     }
-
-    console.log(res);
-    console.log("BFS ENDED");
   }
 
   dfs(node, list = [], visited = {}) {
