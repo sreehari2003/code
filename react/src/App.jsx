@@ -27,8 +27,8 @@ function App() {
   return (
     <div className="container">
       <div className="user-input">
-        {selected.map((el) => (
-          <div className="pill">
+        {selected.map((el,index) => (
+          <div className="pill" key={index}>
             <img src={el.image} alt={el.firstName} />
             <span>{el.firstName}</span>
           </div>
@@ -41,8 +41,8 @@ function App() {
             placeholder="Enter user name"
           />
           <ul className="sugg">
-            {suggestion.map((el) => (
-              <li onClick={() => handleClick(el)}>
+            {suggestion.map((el,index) => (
+              <li onClick={() => handleClick(el)} key={index}>
                 <img src={el.image} alt={el.firstName} />
                 <span>
                   {el.firstName} {el.lastName}
